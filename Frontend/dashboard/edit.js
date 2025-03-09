@@ -1,4 +1,5 @@
 const accessToken = localStorage.getItem("access");
+let idField = document.getElementById("id-field");
 let nameField = document.getElementById("name-field");
 let alterField = document.getElementById("alter-field");
 let urlaubstageField = document.getElementById("urlaubstage-field");
@@ -7,9 +8,9 @@ let geschlechtField = document.getElementById("geschlecht-field");
 
 document.addEventListener("DOMContentLoaded", () => {
   let workerIdParam = new URLSearchParams(window.location.search);
-  const workerName = workerIdParam.get("name");
+  const workerID = workerIdParam.get("id");
 
-  fetch(`http://127.0.0.1:8000/api/worker/${workerName}/`, {
+  fetch(`http://127.0.0.1:8000/api/worker/${workerID}/`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
     .then((response) => response.json())
     .then((data) => {
+      idField.value = data.id;
       nameField.value = data.name;
       alterField.value = data.alter;
       urlaubstageField.value = data.urlaubstage;
@@ -28,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function editWorker() {
   newData = {
+    id: idField.value,
     name: nameField.value,
     alter: alterField.value,
     urlaubstage: urlaubstageField.value,
