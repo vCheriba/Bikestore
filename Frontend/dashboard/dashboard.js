@@ -78,7 +78,7 @@ function loadBike() {
                 let tableDataAnzahl = document.createElement("td");
                 let tableDataKosten = document.createElement("td");
                 let tableDataVerkaeufe = document.createElement("td");
-                let tableDataVorratig = document.createElement("td");
+                let tableDataVorraetig = document.createElement("td");
                 let tableDataEdit = document.createElement("td");
                 let tableDataDelete = document.createElement("td");
 
@@ -90,7 +90,7 @@ function loadBike() {
                 tableDataAnzahl.innerHTML = `${bike.anzahl}`;
                 tableDataKosten.innerHTML = `${bike.kosten}`;
                 tableDataVerkaeufe.innerHTML = `${bike.verkaeufe}`;
-                tableDataVorratig.innerHTML = `${bike.vorratig}`;
+                tableDataVorraetig.innerHTML = `${bike.vorraetig}`;
                 tableDataEdit.innerHTML = `<button class="btn btn-secondary" onclick="editBike(${bike.id})">Bearbeiten</button>`;
                 tableDataDelete.innerHTML = `<button class="btn btn-danger" onclick="deleteBike(${bike.id})">Löschen</button>`;
 
@@ -103,7 +103,7 @@ function loadBike() {
                 tableRow.appendChild(tableDataAnzahl);
                 tableRow.appendChild(tableDataKosten);
                 tableRow.appendChild(tableDataVerkaeufe);
-                tableRow.appendChild(tableDataVorratig);
+                tableRow.appendChild(tableDataVorraetig);
                 tableRow.appendChild(tableDataEdit);
                 tableRow.appendChild(tableDataDelete);
             });
@@ -129,7 +129,7 @@ function logOut() {
 
 // Editieren der Mitarbeiter
 function editWorker(id) {
-    window.location.href = `edit-worker.html?id=${id}`;
+    window.location.href = `edit_worker.html?id=${id}`;
 }
 
 // Löschen eines Mitarbeiters
@@ -159,7 +159,7 @@ function deleteWorker(id) {
 
 // Editieren der Fahrräder
 function editBike(id) {
-    window.location.href = `edit-bike.html?id=${id}`;
+    window.location.href = `edit_bike.html?id=${id}`;
 }
 
 // Löschen eines Fahrrads

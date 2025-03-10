@@ -6,6 +6,6 @@ urlpatterns = [
     path('bike/', BikeAPIView.as_view(), name='name'),
     path('worker/<int:pk>/', WorkerDetailAPIView.as_view(), name='worker_detail'),
     path('worker/create/', WorkerCreateAPIView.as_view(), name='add_worker'),
-    path('bike/create/', BikeDetailAPIView.as_view(), name='bike_detail'),
-    path('bike/<int:pk>/', BikeCreateAPIView.as_view(), name='add_bike'),
+    path('bike/create/', BikeCreateAPIView.as_view(), name='bike_detail'),
+    path('bike/<int:pk>/', BikeDetailAPIView.as_view(), name='add_bike'),
 ]
