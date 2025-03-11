@@ -9,46 +9,55 @@
 </head>
 <body>
     <h1>Willkommen im Dashboard</h1>
+<div class="button-container">
+    <button class="btn btn-primary" onclick="logOut()">Log Out</button>
+    <button class="btn btn-primary" onclick="window.location.href ='add_worker.html'">Mitarbeiter Hinzufügen</button>
+    <button class="btn btn-primary" onclick="window.location.href ='add_bike.html'">Fahrrad Hinzufügen</button>
+</div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="8">Mitarbeiter</th>
+                </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Alter</th>
+                    <th>Urlaubstage</th>
+                    <th>Gehalt</th>
+                    <th>Geschlecht</th>
+                    <th>Bearbeiten</th>
+                    <th>Löschen</th>
+                </tr>
+            </thead>
+            <tbody id="worker-table"></tbody>
+        </table>
+    </div>
 
-    <button style="margin:3rem 0;" class="btn btn-primary" onclick="logOut()">Log Out</button>
-    <button style="margin:3rem 0;" class="btn btn-primary" onclick="window.location.href ='add_worker.html'">Mitarbeiter Hinzufügen</button>
-    <button style="margin:3rem 0;" class="btn btn-primary" onclick="window.location.href ='add_bike.html'">Fahrrad Hinzufügen</button>
-
-    <table>
-        <thead>
-            <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Alter</td>
-                <td>Urlaubstage</td>
-                <td>Gehalt</td>
-                <td>Geschlecht</td>
-                <td>Bearbeiten</td>
-                <td>Löschen</td>
-            </tr>
-        </thead>
-        <tbody id="worker-table">
-
-        </tbody>
-    </table>
-    <table>
-        <thead>
-            <tr>
-                <td>ID</td>
-                <td>Modell</td>
-                <td>Zoll</td>
-                <td>Typ</td>
-                <td>Farbe</td>
-                <td>Anzahl</td>
-                <td>Kosten</td>
-                <td>Verkäufe</td>
-                <td>Vorrätig</td>
-                <td>Bearbeiten</td>
-                <td>Löschen</td>
-            </tr>
-        </thead>
-        <tbody id="bike-table"></tbody>
-    </table>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="11">Fahrräder</th>
+                </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Modell</th>
+                    <th>Zoll</th>
+                    <th>Typ</th>
+                    <th>Farbe</th>
+                    <th>Anzahl</th>
+                    <th>Kosten</th>
+                    <th>Verkäufe</th>
+                    <th>Vorrätig</th>
+                    <th>Bearbeiten</th>
+                    <th>Löschen</th>
+                </tr>
+            </thead>
+            <tbody id="bike-table"></tbody>
+        </table>
+    </div>
 
     <script src="./dashboard.js"></script>
 </body>
